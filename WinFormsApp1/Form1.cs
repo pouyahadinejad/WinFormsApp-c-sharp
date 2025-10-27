@@ -67,13 +67,19 @@
         private void button4_Click(object sender, EventArgs e)
         {
             string message = "";
-            string selectedItem=comboBox1.SelectedItem.ToString();
-            message += "شهر شما :" + selectedItem +Environment.NewLine;
-            string bime=checkBox1.Checked.ToString();
+            string selectedItem = comboBox1.SelectedItem.ToString();
+            message += "شهر شما :" + selectedItem + Environment.NewLine;
+            string bime = checkBox1.Checked.ToString();
             message += "وضعیت بیمه :" + bime + Environment.NewLine;
             string takhasos = listBox1.SelectedItem.ToString();
             message += "تخصص :" + takhasos + Environment.NewLine;
             MessageBox.Show(message);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("اردبیل");
+            listBox1.Items.Add("برنامه نویس فلاتر");
         }
     }
 }

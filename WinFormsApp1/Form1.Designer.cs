@@ -239,6 +239,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = " فایل من";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
