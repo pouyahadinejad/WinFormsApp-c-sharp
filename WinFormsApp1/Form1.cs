@@ -40,5 +40,40 @@
         {
 
         }
+
+        private void textLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("من بهترین برنامه نویس c# هستم", "پویا", MessageBoxButtons.YesNoCancel);
+            if (dialogResult == DialogResult.Yes)
+            {
+                label3.Text = ("بله");
+
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                label3.Text = ("خیر");
+            }
+            if (dialogResult == DialogResult.Cancel)
+            {
+                label3.Text = ("اصلا");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string message = "";
+            string selectedItem=comboBox1.SelectedItem.ToString();
+            message += "شهر شما :" + selectedItem +Environment.NewLine;
+            string bime=checkBox1.Checked.ToString();
+            message += "وضعیت بیمه :" + bime + Environment.NewLine;
+            string takhasos = listBox1.SelectedItem.ToString();
+            message += "تخصص :" + takhasos + Environment.NewLine;
+            MessageBox.Show(message);
+        }
     }
 }
