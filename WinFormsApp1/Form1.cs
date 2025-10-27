@@ -14,6 +14,14 @@
             name = textFirstName.Text;
             lastname = textLastName.Text;
             lblresult.Text = name + "   " + lastname;
+            if(rdbMan.Checked==true)
+            {
+                MessageBox.Show("مرد");
+            }
+            else if(rdbFameale.Checked==true)
+            {
+                MessageBox.Show("زن");
+            }
 
         }
 
@@ -73,7 +81,7 @@
             message += "وضعیت بیمه :" + bime + Environment.NewLine;
             string takhasos = listBox1.SelectedItem.ToString();
             message += "تخصص :" + takhasos + Environment.NewLine;
-            MessageBox.Show(message);
+                MessageBox.Show(message); 
         }
 
         private void Form1_Load(object sender, EventArgs e)

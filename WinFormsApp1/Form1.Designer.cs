@@ -46,6 +46,10 @@
             button4 = new Button();
             comboBox1 = new ComboBox();
             listBox1 = new ListBox();
+            groupBox1 = new GroupBox();
+            rdbMan = new RadioButton();
+            rdbFameale = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -213,12 +217,46 @@
             listBox1.Size = new Size(120, 94);
             listBox1.TabIndex = 17;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbFameale);
+            groupBox1.Controls.Add(rdbMan);
+            groupBox1.Location = new Point(490, 180);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(72, 94);
+            groupBox1.TabIndex = 18;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "جنسیت";
+            // 
+            // rdbMan
+            // 
+            rdbMan.AutoSize = true;
+            rdbMan.Location = new Point(20, 22);
+            rdbMan.Name = "rdbMan";
+            rdbMan.Size = new Size(42, 19);
+            rdbMan.TabIndex = 0;
+            rdbMan.TabStop = true;
+            rdbMan.Text = "مرد";
+            rdbMan.UseVisualStyleBackColor = true;
+            // 
+            // rdbFameale
+            // 
+            rdbFameale.AutoSize = true;
+            rdbFameale.Location = new Point(24, 47);
+            rdbFameale.Name = "rdbFameale";
+            rdbFameale.Size = new Size(38, 19);
+            rdbFameale.TabIndex = 1;
+            rdbFameale.TabStop = true;
+            rdbFameale.Text = "زن";
+            rdbFameale.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(999, 450);
+            Controls.Add(groupBox1);
             Controls.Add(listBox1);
             Controls.Add(comboBox1);
             Controls.Add(button4);
@@ -240,6 +278,8 @@
             Name = "Form1";
             Text = " فایل من";
             Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,5 +304,8 @@
         private Button button4;
         private ComboBox comboBox1;
         private ListBox listBox1;
+        private GroupBox groupBox1;
+        private RadioButton rdbFameale;
+        private RadioButton rdbMan;
     }
 }
